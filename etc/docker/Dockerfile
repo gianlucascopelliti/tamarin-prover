@@ -55,7 +55,10 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get -y --no-install-recommends install \
         maude \
-        graphviz
+        graphviz \
+        ### Install python for running oracles
+        python3 && ln -s /usr/bin/python3 /usr/bin/python
+        ###
 COPY --from=tamarin-build /usr/local/bin /usr/local/bin
 COPY etc/docker/res/entrypoint.sh /usr/local/bin/
 RUN chmod 755 /usr/local/bin/entrypoint.sh
