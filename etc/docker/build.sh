@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # call in top-level dir...
-docker build -t tamarin-prover/tamarin:latest -f etc/docker/Dockerfile .
+docker build -t selfrevocation/tamarin:v1.6.1 -f etc/docker/Dockerfile .
